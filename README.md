@@ -5,7 +5,7 @@ Este entorno levanta tres servicios web en contenedores para practicar análisis
 ## Servicios incluidos
 - Apache (http://localhost:8081)
 - Nginx (http://localhost:8082)
-- OWASP Juice Shop (http://localhost:3000)
+- OWASP Juice Shop (http://localhost:3030)
 
 ## Uso
 1. Levanta los servicios:
@@ -22,7 +22,7 @@ Este entorno levanta tres servicios web en contenedores para practicar análisis
    ```bash
    nuclei -u http://localhost:8081
    nuclei -u http://localhost:8082
-   nuclei -u http://localhost:3000
+   nuclei -u http://localhost:3030
    ```
 
 4. Documenta tus hallazgos en `reporte.md`.

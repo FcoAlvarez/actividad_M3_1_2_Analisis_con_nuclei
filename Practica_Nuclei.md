@@ -31,7 +31,7 @@ docker-compose up -d
 Servicios:  
 - Apache → http://localhost:8081  
 - Nginx → http://localhost:8082  
-- OWASP Juice Shop → http://localhost:3000  
+- OWASP Juice Shop → http://localhost:3030  
 
 #### Tercero.  
 Verifica que los contenedores estén corriendo:  
@@ -50,7 +50,7 @@ Ejecuta los escaneos básicos:
 ```bash
 nuclei -u http://localhost:8081
 nuclei -u http://localhost:8082
-nuclei -u http://localhost:3000
+nuclei -u http://localhost:3030
 ```
 
 #### Sexto.  
@@ -58,7 +58,7 @@ Ejecuta escaneos avanzados con plantillas:
 ```bash
 nuclei -u http://localhost:8081 -t cves/
 nuclei -u http://localhost:8082 -t exposures/
-nuclei -u http://localhost:3000 -t vulnerabilities/
+nuclei -u http://localhost:3030 -t vulnerabilities/
 ```
 
 #### Séptimo.  

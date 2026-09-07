@@ -1,19 +1,27 @@
 version: '3'
+
 services:
   apache:
     image: httpd:2.4
     container_name: apache_server
     ports:
       - "8081:80"
+    volumes:
+      - apache_data:/usr/local/apache2/htdocs
 
   nginx:
     image: nginx:latest
     container_name: nginx_server
     ports:
       - "8082:80"
+    volumes:
+      - ./nginx-html:/usr/share/nginx/html
 
   juice-shop:
     image: bkimminich/juice-shop
     container_name: juice_shop
     ports:
-      - "3000:3000"
+      - "3030:3000"
+
+volumes:
+  apache_data:
